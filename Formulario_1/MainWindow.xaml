@@ -11,28 +11,28 @@
             <!--Id-->
             <Label Content="Articulo Id" FontSize="15"/>
             <StackPanel Orientation="Horizontal">
-                <TextBox Name="ArticuloIdTextBox" Height="20" Width="200" Margin="5,0" HorizontalAlignment="Left"/>
-                <Button Name="BuscarButton" Content="Buscar"/>
+                <TextBox Name="ArticuloIdTextBox" Height="20" Text="{Binding ArticuloId}" Width="200" Margin="5,0" HorizontalAlignment="Left"/>
+                <Button Name="BuscarButton" Content="Buscar" Click="BuscarButton_Click"/>
             </StackPanel>
             
             <!--Nombre del Articulo-->
             <Label Content="Nombre Articulo" FontSize="15"/>
-            <TextBox Name="NombreArticuloTextBox" Height="20" Width="200" HorizontalAlignment="Left" Margin="5,0"/>
+            <TextBox Name="NombreArticuloTextBox" Height="20" Text="{Binding NombreArticulo}" Width="200" HorizontalAlignment="Left" Margin="5,0"/>
             
             <!--Categoria-->
             <Label Content="Categoria" FontSize="15"/>
-            <ComboBox Name="CategoriaCombox" Width="200" HorizontalAlignment="Left" Margin="5,0"/>
+            <ComboBox Name="CategoriaCombox" Width="200" SelectedValue="{Binding Categoria}" HorizontalAlignment="Left" Margin="5,0"/>
 
             <!--Precio del articulo-->
             <Label Content="Precio" FontSize="15"/>
-            <TextBox Name="PrecioTextBox" Height="20" Width="200" HorizontalAlignment="Left" Margin="5,0"/>
+            <TextBox Name="PrecioTextBox" Height="20" Width="200" Text="{Binding Precio}" HorizontalAlignment="Left" Margin="5,0"/>
             
             <!--Activo-->
-            <CheckBox Name="ActivoCheckBox" Content="Activo" Margin="5,0"/>
+            <CheckBox Name="ActivoCheckBox" Content="Activo" IsChecked="{Binding Activo}" Margin="5,0"/>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="21,17,5,0" Width="149.7">
-                <Button Name="NuevoButton" Content="Nuevo"/>
-                <Button Name="GuardarButton" Content="Guardar" Margin="5,0"/>
+                <Button Name="NuevoButton" Content="Nuevo" Click="NuevoButton_Click"/>
+                <Button Name="GuardarButton" Content="Guardar" Margin="5,0" Click="GuardarButton_Click"/>
                 <Button Name="EliminarButton" Content="Eliminar"/>
             </StackPanel>
 
